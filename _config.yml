@@ -1,0 +1,22 @@
+title: "QuickPassword"
+tagline: "Riding the wave of consciousness in this treacherous mortal sea..."
+description: "A password generator that covers 99% of use cases."
+url: "https://quickpassword.net"
+
+sass:
+  sass_dir: "node_modules/bootstrap/scss/"
+  style: compressed
+
+exclude:
+  - "node_modules"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "package.json"
+  - "package-lock.json"
+  - "*.rb"
+  - ".history"
+  - ".netlify"
+  - ".jekyll-cache"
+  - ".jekyll-metadata"
+  - ".gitignore"
+  - "CHANGELOG.md"
