@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.1] - 2020-05-09
+
+### Changed
+
+- Toast now has solid background color and white text for clearer notification
+
+### Fixed
+
+- Sanitized string being written to clipboard that fixes `&` symbol being copied as `&amp;`
+
 ## [1.1.0] - 2020-05-04
 
 ### Added

@@ -28,7 +28,7 @@
 <div class="container pt-3">
   <div class="row">
     <div class="col-lg text-center">
-      <img src="logo.png" width="50%" class="img-responsive"/>
+      <img src="logo.png" width="50%" class="img-responsive" role="none"/>
     </div>
   </div>
 </div>
@@ -39,7 +39,7 @@
     <div class="col-lg">
       <div class="card frame" >
         <div class="card-header">
-          <span class="h4 password-title">👍 Quick</span>
+          <span class="h4 password-title">👍 Quick </span>
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item h5 password pt-3" id="alphaNum24" onclick="copyText('alphaNum24'); showToast();" style="cursor:pointer" title="Click to copy">xXxXxXxXxXxXxXxXxXxXxXxX</li>
@@ -89,7 +89,7 @@
   <div class="row">
 
     <div class="col-lg text-center">
-      <button type="button" class="btn btn-danger btn-lg btn-block password-generate mb-3" onclick="genPassword()">Generate Passwords</button>
+      <button type="button" class="btn btn-danger brand text-white btn-lg btn-block password-generate mb-3" onclick="genPassword()">Generate Passwords</button><span class="ms-3 h3 password-title info" title="Click on any password to copy it">ⓘ</span>
       <p class="text-muted ml-2 mt-2 credits">A Side Project by <a href="https://paramdeo.com" target="_blank">Paramdeo Singh</a>. Passwords are generated client-side for security & privacy. View <a href="https://github.com/paramdeo/quickpassword.net" target="_blank">Source</a> on GitHub.</p>
     </div>
 
@@ -110,7 +110,9 @@
 <script>
 function copyText(id) {
   var text = document.getElementById(id).innerHTML;
-  navigator.clipboard.writeText(text);
+  navigator.clipboard.writeText(
+    text.replaceAll('&amp;', '&')
+  );
 }
 </script>
 
@@ -124,7 +126,7 @@ function copyText(id) {
 
 <div class="toast-container position-absolute bottom-0 bottom-0 end-0 p-3">
   <div class="toast border-brand" role="alert" aria-live="assertive" aria-atomic="true" id="copy-toast">
-    <div class="toast-body brand">🎯 Copied to clipboard!</div>
+    <div class="toast-body brand text-white">Password copied to clipboard!</div>
   </div>
 </div>
 
