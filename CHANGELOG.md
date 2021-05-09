@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.1.1] - 2020-05-09
+## [1.1.1] - 2021-05-09
 
 ### Changed
 
@@ -12,7 +12,7 @@ All notable changes to this project will be documented in this file.
 
 - Sanitized string being written to clipboard that fixes `&` symbol being copied as `&amp;`
 
-## [1.1.0] - 2020-05-04
+## [1.1.0] - 2021-05-04
 
 ### Added
 
