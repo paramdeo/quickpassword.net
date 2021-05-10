@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## [1.1.1] - 2021-05-09
 
+### Added
+
+- Added PurgeCSS for optimized removal of unused styles
+
 ### Changed
 
 - Toast now has solid background color and white text for clearer notification

@@ -6,6 +6,7 @@ url: "https://quickpassword.net"
 sass:
   sass_dir: "node_modules/bootstrap/scss/"
   style: compressed
+  sourcemap: never
 
 exclude:
   - "node_modules"
