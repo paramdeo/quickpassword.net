@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.2] - 2021-05-14
+
+### Changed
+
+- Moved the entire project from `Bootstrap` to `Tailwind CSS`
+- Changed font family from `IBM Plex` to `Fira`
+- Changed color scheme
+
+### Removed
+
+- Removed `Jekyll` build pipeline entirely
+- Removed `PurgeCSS` workflow as the `Tailwind` JIT compiler optimizes critical CSS
+- Notification toast removed in favor of a simple confirmation message
+
 ## [1.1.1] - 2021-05-09
 
 ### Added

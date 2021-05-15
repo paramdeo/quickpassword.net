@@ -1,14 +1,13 @@
 {
   "name": "quickpassword.net",
-  "version": "1.1.1",
   "description": "A password generator that covers 99% of use cases.",
   "scripts": {
-    "jekyll-serve": "bundle exec jekyll serve",
-    "jekyll-clean": "rm -rf _site",
+    "tailwind-devwatch": "TAILWIND_MODE=watch NODE_ENV=production postcss ./src/style.css -o ./dist/style.css -w",
+    "tailwind-build": "NODE_ENV=production postcss ./src/style.css -o ./dist/style.css",
     "purge-cloudflare": "ruby purge-cloudflare.rb",
-    "staging-deploy": "bundle exec jekyll build && netlifyctl deploy --draft --publish-directory _site",
-    "preproduction-deploy": "bundle exec jekyll build; purgecss --css _site/style.css --content _site/index.html --output _site/style.css",
-    "production-deploy": "netlifyctl deploy --publish-directory _site && node ./node_modules/npm-delay 2000 && ruby purge-cloudflare.rb"
+    "staging-deploy": "netlifyctl deploy --draft --publish-directory dist",
+    "preproduction-deploy": "NODE_ENV=production postcss ./src/style.css -o ./dist/style.css",
+    "production-deploy": "netlifyctl deploy --publish-directory dist"
   },
   "repository": {
     "type": "git",
@@ -21,10 +20,12 @@
   },
   "homepage": "https://quickpassword.net",
   "dependencies": {
-    "bootstrap": "^5.0.0-beta2",
-    "npm-delay": "^1.0.4"
+    "postcss-cli": "^8.3.1",
+    "postcss-import": "^14.0.2"
   },
   "devDependencies": {
-    "purgecss": "^4.0.3"
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.2.15",
+    "tailwindcss": "^2.1.2"
   }
 }

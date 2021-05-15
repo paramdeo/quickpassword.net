@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind screens;
+
+/*
+a, a:hover {
+  text-decoration: none;
+}
+
+.info {
+  cursor: help;
+}
+*/
