@@ -860,9 +860,9 @@ video {
 .p-10 {
 	padding: 2.5rem;
 }
-.py-3 {
-	padding-top: 0.75rem;
-	padding-bottom: 0.75rem;
+.py-5 {
+	padding-top: 1.25rem;
+	padding-bottom: 1.25rem;
 }
 .py-10 {
 	padding-top: 2.5rem;
@@ -880,13 +880,13 @@ video {
 	padding-left: 0.75rem;
 	padding-right: 0.75rem;
 }
+.py-3 {
+	padding-top: 0.75rem;
+	padding-bottom: 0.75rem;
+}
 .px-10 {
 	padding-left: 2.5rem;
 	padding-right: 2.5rem;
-}
-.py-5 {
-	padding-top: 1.25rem;
-	padding-bottom: 1.25rem;
 }
 .px-5 {
 	padding-left: 1.25rem;
@@ -1079,9 +1079,9 @@ video {
 .ease-in {
 	transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
-.hover\:scale-105:hover {
-	--tw-scale-x: 1.05;
-	--tw-scale-y: 1.05;
+.hover\:bg-qp-2:hover {
+	--tw-bg-opacity: 1;
+	background-color: rgba(237, 242, 244, var(--tw-bg-opacity));
 }
 .focus\:outline-none:focus {
 	outline: 2px solid transparent;
