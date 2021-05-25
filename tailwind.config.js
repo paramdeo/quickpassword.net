@@ -7,8 +7,8 @@ module.exports = {
   darkMode: false,
   theme: {
     fontFamily: {
-      sans: ['"Fira Sans"', 'sans-serif'],
-      mono: ['"Fira Mono"', 'monospace']
+      sans: ['-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Helvetica', 'Arial', 'sans-serif', "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"],
+      mono: ['SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', 'monospace']
     },
     colors: {
       'qp-1': '#2B2D42',

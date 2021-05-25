@@ -20,7 +20,6 @@
   <meta property="og:type" content="website"/>
   <link rel="stylesheet" href="style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/chance/1.1.7/chance.min.js" integrity="sha512-dELYIOEzIECWdvsEdoywFOB4qKDmtQee33yD0dQnzAE7eBGKJ984VQXRLs/vlsP4Sb3VchbQL7iAy4NWqetCsw==" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="fonts.css" media="print" onload="this.media='all'">
 </head>
 
 <body onload="genPassword()" class="bg-qp-1">
@@ -35,13 +34,13 @@
 <div class="container mx-auto block space-y-10 md:space-y-0 md:grid md:grid-cols-2">
 
     <div class="p-3 space-x-3 space-y-3 ">
-      <p class="p-3 bg-qp-2 rounded-md ring-3 ring-qp-2 font-mono text-lg clear-left truncate" id="alphaNum24" onclick="copyText('alphaNum24')" style="cursor:pointer" title="Click to copy">xxxxxxxxxxxxxxxxxxxxxxxx</p>
-      <p class="text-md font-sans clear-left text-qp-2">24 Characters + Numbers <span id="alphaNum24Confirm" class="text-qp-4 hidden"> ✅ Password Copied!</span></p>
+      <p class="p-3 bg-qp-2 rounded-md ring-3 ring-qp-2 font-mono text-lg clear-left truncate" id="alphaNum24" _="on click call copyText('alphaNum24') then put '✅ Password Copied!' into #alphaNum24Desc then wait 2s then put '24 Characters + Numbers' into #alphaNum24Desc" style="cursor:pointer" title="Click to copy">xxxxxxxxxxxxxxxxxxxxxxxx</p>
+      <p id="alphaNum24Desc" class="text-md font-sans clear-left text-qp-2">24 Characters + Numbers</p>
     </div>
 
     <div class="p-3 space-x-3 space-y-3 ">
-      <p class="p-3 bg-qp-2 rounded-md ring-3 ring-qp-2 font-mono text-lg clear-left truncate" id="alphaNumSym36" onclick="copyText('alphaNumSym36')" style="cursor:pointer" title="Click to copy">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-      <p class="text-md font-sans clear-left text-qp-2">36 Characters + Numbers + Symbols <span id="alphaNumSym36Confirm" class="text-qp-4 hidden"> ✅ Password Copied!</span></p>
+      <p class="p-3 bg-qp-2 rounded-md ring-3 ring-qp-2 font-mono text-lg clear-left truncate" id="alphaNumSym36" _="on click call copyText('alphaNumSym36') then put '✅ Password Copied!' into #alphaNumSym36Desc then wait 2s then put '36 Characters + Numbers + Symbols' into #alphaNumSym36Desc" style="cursor:pointer" title="Click to copy">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+      <p id="alphaNumSym36Desc" class="text-md font-sans clear-left text-qp-2">36 Characters + Numbers + Symbols</p>
     </div>
 
 </div>
@@ -49,8 +48,8 @@
 <div class="container mx-auto py-10 grid grid-cols-1">
 
   <div class="p-3 space-x-3 space-y-3">
-    <p class="p-3 bg-qp-2 rounded-md ring-3 ring-qp-2 font-mono text-lg clear-left truncate" id="alphaNumSym48" onclick="copyText('alphaNumSym48')" style="cursor:pointer" title="Click to copy">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-    <p class="text-md font-sans clear-left text-qp-2">48 Characters + Numbers + Symbols <span id="alphaNumSym48Confirm" class="text-qp-4 hidden"> ✅ Password Copied!</span></p>
+    <p class="p-3 bg-qp-2 rounded-md ring-3 ring-qp-2 font-mono text-lg clear-left truncate" id="alphaNumSym48" style="cursor:pointer" title="Click to copy" _="on click call copyText('alphaNumSym48') then put '✅ Password Copied!' into #alphaNumSym48Desc then wait 2s then put '48 Characters + Numbers + Symbols' into #alphaNumSym48Desc">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+    <p id="alphaNumSym48Desc" class="text-md font-sans clear-left text-qp-2">48 Characters + Numbers + Symbols</p>
   </div>
 
   <div class="py-6 space-y-3 mx-auto">
@@ -62,12 +61,6 @@
   </div>
 
 </div>
-
-<script>
-  function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
-</script>
 
 <script>
   function genPassword() {
@@ -86,10 +79,9 @@ function copyText(id) {
   navigator.clipboard.writeText(
     text.replaceAll('&amp;', '&')
   );
-  document.getElementById(id + 'Confirm').classList.remove("hidden");
-  sleep(1500).then(() => { document.getElementById(id + 'Confirm').classList.add("hidden"); });
 }
 </script>
 
+<script src="https://unpkg.com/hyperscript.org@0.0.9"></script>
 </body>
 </html>

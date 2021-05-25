@@ -6,7 +6,7 @@ All notable changes to this project will be documented in this file.
 
 ### Changed
 
-- Moved the entire project from `Bootstrap` to `Tailwind CSS`
+- Changed the project's CSS framework from `Bootstrap` to `Tailwind`
 - Changed font family from `IBM Plex` to `Fira`
 - Changed color scheme
 

@@ -3,12 +3,7 @@
 @tailwind utilities;
 @tailwind screens;
 
-/*
-a, a:hover {
-  text-decoration: none;
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-
-.info {
-  cursor: help;
-}
-*/
