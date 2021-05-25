@@ -2,4 +2,3 @@
 .history
 *.rb
 node_modules
-dist/style.css
