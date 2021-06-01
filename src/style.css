@@ -7,3 +7,11 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.password-field {
+  @apply p-3 bg-gray-800 rounded-md text-lg clear-left truncate hover:ring-2 ring-yellow-500 ring-opacity-75;
+}
+
+.password-description {
+  @apply clear-left text-yellow-500;
+}

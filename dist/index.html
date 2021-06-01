@@ -22,25 +22,25 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/chance/1.1.7/chance.min.js" integrity="sha512-dELYIOEzIECWdvsEdoywFOB4qKDmtQee33yD0dQnzAE7eBGKJ984VQXRLs/vlsP4Sb3VchbQL7iAy4NWqetCsw==" crossorigin="anonymous"></script>
 </head>
 
-<body onload="genPassword()" class="bg-qp-1">
+<body onload="genPassword()" class="bg-gray-700 text-white font-mono">
 
-<div class="container mx-auto py-5">
+<div class="container mx-auto py-5 md:mb-10">
   <div class="block space-y-5">
     <img class="mx-auto w-1/2 md:w-1/3" src="logo.png" alt="QuickPassword logo" role="none"/>
-    <p class="font-mono text-xs md:text-base uppercase text-center text-qp-4 pb-7 opacity-90 animate-pulse">> Click on any password to copy <</p>
+    <p class="font-mono text-xs md:text-base uppercase text-center font-bold opacity-90 animate-pulse">Click on any password to copy</p>
   </div>
 </div>
 
 <div class="container mx-auto block space-y-10 md:space-y-0 md:grid md:grid-cols-2">
 
-    <div class="p-3 space-x-3 space-y-3 ">
-      <p class="p-3 bg-qp-2 rounded-md ring-3 ring-qp-2 font-mono text-lg clear-left truncate" id="alphaNum24" _="on click call copyText('alphaNum24') then put '✅ Password Copied!' into #alphaNum24Desc then wait 2s then put '24 Characters + Numbers' into #alphaNum24Desc" style="cursor:pointer" title="Click to copy">xxxxxxxxxxxxxxxxxxxxxxxx</p>
-      <p id="alphaNum24Desc" class="text-md font-sans clear-left text-qp-2">24 Characters + Numbers</p>
+    <div class="p-3 space-x-3 space-y-3">
+      <p class="password-field" id="alphaNum24" _="on click call copyText('alphaNum24') then put '✅ Password Copied!' into #alphaNum24Desc then wait 2s then put '24 Characters + Numbers' into #alphaNum24Desc" style="cursor:pointer" title="Click to copy">xxxxxxxxxxxxxxxxxxxxxxxx</p>
+      <p id="alphaNum24Desc" class="password-description">24 Characters + Numbers</p>
     </div>
 
-    <div class="p-3 space-x-3 space-y-3 ">
-      <p class="p-3 bg-qp-2 rounded-md ring-3 ring-qp-2 font-mono text-lg clear-left truncate" id="alphaNumSym36" _="on click call copyText('alphaNumSym36') then put '✅ Password Copied!' into #alphaNumSym36Desc then wait 2s then put '36 Characters + Numbers + Symbols' into #alphaNumSym36Desc" style="cursor:pointer" title="Click to copy">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-      <p id="alphaNumSym36Desc" class="text-md font-sans clear-left text-qp-2">36 Characters + Numbers + Symbols</p>
+    <div class="p-3 space-x-3 space-y-3">
+      <p class="password-field" id="alphaNumSym36" _="on click call copyText('alphaNumSym36') then put '✅ Password Copied!' into #alphaNumSym36Desc then wait 2s then put '36 Characters + Numbers + Symbols' into #alphaNumSym36Desc" style="cursor:pointer" title="Click to copy">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+      <p id="alphaNumSym36Desc" class="password-description">36 Characters + Numbers + Symbols</p>
     </div>
 
 </div>
@@ -48,16 +48,16 @@
 <div class="container mx-auto py-10 grid grid-cols-1">
 
   <div class="p-3 space-x-3 space-y-3">
-    <p class="p-3 bg-qp-2 rounded-md ring-3 ring-qp-2 font-mono text-lg clear-left truncate" id="alphaNumSym48" style="cursor:pointer" title="Click to copy" _="on click call copyText('alphaNumSym48') then put '✅ Password Copied!' into #alphaNumSym48Desc then wait 2s then put '48 Characters + Numbers + Symbols' into #alphaNumSym48Desc">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-    <p id="alphaNumSym48Desc" class="text-md font-sans clear-left text-qp-2">48 Characters + Numbers + Symbols</p>
+    <p class="password-field" id="alphaNumSym48" style="cursor:pointer" title="Click to copy" _="on click call copyText('alphaNumSym48') then put '✅ Password Copied!' into #alphaNumSym48Desc then wait 2s then put '48 Characters + Numbers + Symbols' into #alphaNumSym48Desc">xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+    <p id="alphaNumSym48Desc" class="password-description">48 Characters + Numbers + Symbols</p>
   </div>
 
   <div class="py-6 space-y-3 mx-auto">
-    <button type="button" class="text-2xl bg-qp-4 text-qp-1 py-2 px-3 mt-3 rounded-lg focus:outline-none hover:bg-qp-2" onclick="genPassword()">Generate New Passwords</button>
+    <button type="button" class="text-2xl bg-gray-800 p-5 mt-3 rounded-lg focus:outline-none hover:bg-gray-900" onclick="genPassword()">Generate New Passwords</button>
   </div>
 
-  <div class="p-3 space-x-3 space-y-3 mx-auto">
-    <p class="text-center text-sm text-qp-3">Copyright &copy; <a class="text-qp-4" href="https://paramdeo.com" target="_blank">Paramdeo Singh</a> · Passwords are generated client-side for security & privacy · View <a class="text-qp-4" href="https://github.com/paramdeo/quickpassword.net" target="_blank">Source</a> on GitHub</p>
+  <div class="p-3 space-x-3 space-y-3 mx-auto text-center text-sm">
+    <p>Copyright (c) <a class="text-yellow-500 font-bold" href="https://paramdeo.com" target="_blank" title="Personal website of Paramdeo Singh">Paramdeo Singh</a> <strong>·</strong> Yet Another Side Project (tm) <strong>·</strong> <svg class="inline" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg> <a href="https://github.com/paramdeo/quickpassword.net" target="_blank" rel="noopener" class="font-bold" title="Source code for QuickPassword on GitHub">Source</a></p>
   </div>
 
 </div>
@@ -83,5 +83,6 @@ function copyText(id) {
 </script>
 
 <script src="https://unpkg.com/hyperscript.org@0.0.9"></script>
+
 </body>
 </html>
