@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## [1.1.3] - 2021-09-18
 
-## Fixed
+### Fixed
 
 - Updated NPM package `path-parse` to fix GitHub Dependabot alert relating to `CVE-2021-23343`.
 
