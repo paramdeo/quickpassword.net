@@ -5,9 +5,9 @@
     "tailwind-devwatch": "TAILWIND_MODE=watch NODE_ENV=production postcss ./src/style.css -o ./dist/style.css -w",
     "tailwind-build": "NODE_ENV=production postcss ./src/style.css -o ./dist/style.css",
     "purge-cloudflare": "ruby purge-cloudflare.rb",
-    "staging-deploy": "netlifyctl deploy --draft --publish-directory dist",
+    "staging-deploy": "netlify deploy --dir=dist",
     "preproduction-deploy": "NODE_ENV=production postcss ./src/style.css -o ./dist/style.css",
-    "production-deploy": "netlifyctl deploy --publish-directory dist"
+    "production-deploy": "netlify deploy --prod --dir=dist"
   },
   "repository": {
     "type": "git",

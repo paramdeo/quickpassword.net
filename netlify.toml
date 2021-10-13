@@ -9,7 +9,7 @@
     X-XSS-Protection = "1; mode=block"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Strict-Transport-Security = "max-age=7257600"
-    Content-Security-Policy = "default-src 'self' 'unsafe-inline' data: *.cloudflare.com unpkg.com; object-src 'none';"
+    Content-Security-Policy = "default-src 'self' 'unsafe-inline' data: *.cloudflare.com unpkg.com quickpassword.goatcounter.com gc.zgo.at; object-src 'none';"
 [build.environment]
   TZ='America/New_York'
 

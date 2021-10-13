@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.4] - 2021-10-12
+
+### Added
+
+- Added GoatCounter Analytics via self-hosted `/count.js`
+- Added GoatCounter endpoints to the Content Security Policy in `netlify.toml`
+
 ## [1.1.3] - 2021-09-18
 
 ### Fixed
