@@ -1,5 +1,4 @@
 .netlify
 .history
-*.rb
 *.log
 node_modules

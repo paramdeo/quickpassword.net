@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.5] - 2021-10-25
+
+### Added
+
+- Added minification of CSS and HTML via NPM package `html-minify`
+
+### Changed
+
+- Changed all instances of `var` to `let` in keeping with ES2015 syntax
+- Changed project description and Open Graph image
+
 ## [1.1.4] - 2021-10-12
 
 ### Added

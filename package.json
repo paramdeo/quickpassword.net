@@ -2,11 +2,12 @@
   "name": "quickpassword.net",
   "description": "A password generator that covers 99% of use cases.",
   "scripts": {
+    "purge-cloudflare": "curl -X POST 'https://api.cloudflare.com/client/v4/zones/2b87f4f2e24b98a946e0712053bbe53e/purge_cache' -H \"$CLOUDFLARE_PURGE_TOKEN\" -H 'Content-Type:application/json' --data '{\"purge_everything\":true}'",
     "tailwind-devwatch": "TAILWIND_MODE=watch NODE_ENV=production postcss ./src/style.css -o ./dist/style.css -w",
     "tailwind-build": "NODE_ENV=production postcss ./src/style.css -o ./dist/style.css",
-    "purge-cloudflare": "ruby purge-cloudflare.rb",
+    "minify-css": "html-minifier --collapse-whitespace --remove-comments --minify-css true dist/style.css > dist/style.min.css",
+    "minify-html": "rm dist/style.css && html-minifier --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --minify-css true --minify-js true src/index.html > dist/index.html",
     "staging-deploy": "netlify deploy --dir=dist",
-    "preproduction-deploy": "NODE_ENV=production postcss ./src/style.css -o ./dist/style.css",
     "production-deploy": "netlify deploy --prod --dir=dist"
   },
   "repository": {
