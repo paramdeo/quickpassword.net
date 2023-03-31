@@ -1,0 +1,14 @@
+[Settings]
+  ID = "c4617396-9d88-4149-9bf5-ae441294a199"
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "public,s-max-age=604800,max-age=3600"
+    Permissions-Policy = "interest-cohort=()"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Strict-Transport-Security = "max-age=7257600"
+    Content-Security-Policy = "default-src 'self' 'unsafe-inline' data: ws: *.quickpassword.net *.goatcounter.com *.zgo.at *.cloudflare.com *.netlify.app *.paramdeo.com; object-src 'none';"
+[build.environment]
+  TZ='America/New_York'
