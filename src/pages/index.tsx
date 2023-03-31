@@ -84,7 +84,7 @@ useEffect(() => {
               <label className="sr-only">Password</label>
               <div className="relative">
                 <p
-                  className="w-full rounded-lg border-gray-200 p-4 pr-12 text-md text-center shadow-sm"
+                  className="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm text-center shadow-sm"
                   ><strong>{quickPassword}</strong></p>
               </div>
             </div>
