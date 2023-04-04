@@ -5,25 +5,25 @@ import { useEffect, useState } from 'react'
 export default function Home() {
 
 // sane default characters
-const allChars : string = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*[]?"
+const allChars: string = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*[]?"
 
 // [...string] sytntax requires "target": "esnext" in tsconfig.json (es2015+ to be specific)
-const passwordChars : Array<string> = [...allChars]
+const passwordChars: Array<string> = [...allChars]
 
-let passwordLength : number = 36
+let passwordLength: number = 36
 
-const randomize = () : string => {
+const randomize = (): string => {
   // cache the length of the array to avoid looking up length each time randomize() is called
-  let totalChars : number = passwordChars.length
+  let totalChars: number = passwordChars.length
   // get random array index value between zero and the array length
-  let index : number = Math.floor(Math.random() * totalChars)
+  let index: number = Math.floor(Math.random() * totalChars)
   // return random array index value
   return passwordChars[index]
 }
 
-const length = (desiredLength : number) : string => {
+const length = (desiredLength: number): string => {
   // temporary array for holding characters
-  let array : Array<string> = []
+  let array: Array<string> = []
   for (let p = 0; p < desiredLength; p++) {
     // call the randomize function and push the value to the array
     array.push(randomize())
@@ -32,13 +32,13 @@ const length = (desiredLength : number) : string => {
   return array.join('')
 }
 
-const regeneratePassword = () : void => {
-  let newPassword : string = length(passwordLength)
+const regeneratePassword = (): void => {
+  let newPassword: string = length(passwordLength)
   // use setter to update state variable with new random password
   setQuickPassword(newPassword)
 }
 
-const copyToClipboard = (password: string) : void => {
+const copyToClipboard = (password: string): void => {
   // previously had to chain .replaceAll('&amp;', '&') in older implementations
   navigator.clipboard.writeText(password)
 }
@@ -84,7 +84,7 @@ useEffect(() => {
               <label className="sr-only">Password</label>
               <div className="relative">
                 <p
-                  className="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm text-center shadow-sm"
+                  className="w-full rounded-lg border-gray-200 p-4 pr-12 text-sm text-center truncate shadow-sm"
                   ><strong>{quickPassword}</strong></p>
               </div>
             </div>
@@ -98,6 +98,9 @@ useEffect(() => {
               onClick={() => copyToClipboard(quickPassword)}>
               Copy to Clipboard
             </button>
+            <p className="text-center text-xs">
+            ✨ Sending a GET request to <span className="bg-slate-950 text-slate-50 rounded p-0.5">/api/generate</span> returns a JSON object with a new password each time.
+            </p>
             <p className="text-center text-xs text-gray-500">
             Copyright &copy; <a href="https://paramdeo.com" target="_blank" title="Personal website of Paramdeo Singh">Paramdeo Singh</a> <strong>·</strong> Made with ☕️ in 🇬🇾
             </p>
